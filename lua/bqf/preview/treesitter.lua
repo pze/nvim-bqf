@@ -112,7 +112,9 @@ function M.shrinkCache()
 end
 
 local function init()
-    initialized, parsers = pcall(require, 'nvim-treesitter.parsers')
+    -- initialized, parsers = pcall(require, 'nvim-treesitter.parsers')
+    -- not compatible with ts#main branch.
+    initialized = false
     if not initialized then
         return
     end
